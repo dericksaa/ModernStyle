@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product{
+    border: 3px black solid;
+    border-radius: 23px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 11px 18px;
+    width: 233px;
+    margin: 26px;
+}
+
+.info_prod{
+    display: grid;
+    justify-items: center;
+}
+
+.product h3{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+}
+
+.contador{
+    display: flex;
+    gap: 10px;
+    
+}
+
+.product button{
+    background-color: black;
+    color: white;
+    height: 24px;
+    width: 24px;
+    border: none;
+    border-radius: 3px;
+    font-size: 20px;
+}

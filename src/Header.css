@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Header img{
+    height: 60px;
+}
+
+.Header  h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+}
