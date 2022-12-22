@@ -8,7 +8,7 @@ const Product = ({product})=>{
     const {nombre, precio, foto} = product
 
     const [cantidad, setCantidad]=useState(0)
-    // const [items, setItems]=useState(carac)
+
     useState()
     const sumador =(e)=>{
         setCantidad(cantidad+1);

@@ -4,7 +4,7 @@ import Brochas from './images/brochas.png';
 import paletTrendy from './images/PaletaTrendy.png';
 import sombras2 from './images/sombras2.png';
 
-export const StoreProducts = [
+export const ProductsMakeUp = [
     {
         id:1,
         nombre: 'kit kabuki',

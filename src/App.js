@@ -1,25 +1,27 @@
-import './App.css';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import MakeUpPage from './MakeUp';
+import Header from './Header'
 import Footer from './Footer';
-import Header from './Header';
-import Product from './Product';
-import { StoreProducts } from "./carac.js";
+import SkinCare from './SkinCare';
+import Navigation from './Navigation';
+
+
 
 function App() {
   return (
-    <div className="App">
+    <>
+    <HashRouter>
       <Header/>
-      <div className='category'>
-        <button id='maquillaje'>Maquillaje</button>
-        <button>Cuidado Facial</button>
-      </div>
-      {
-        StoreProducts.map(product=>(
-          <Product key={product.id} product={product} />
-        ))
-      }
+        <Routes>
+          <Route path='/' element={<MakeUpPage/>}/>
+          <Route path='/SkinCare' element={<SkinCare/>}/>
+        </Routes>
       <Footer/>
-    </div>
+      <Navigation/>
+    </HashRouter>
+    </>
   );
 }
 
 export default App;
+

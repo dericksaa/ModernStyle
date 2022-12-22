@@ -25,6 +25,7 @@
     display: grid;
     justify-items: center;
     align-content: space-between;
+    text-align: center;
 }
 
 .product h3{
