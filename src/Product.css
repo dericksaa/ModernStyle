@@ -7,16 +7,24 @@
 .product{
     border: 3px black solid;
     border-radius: 23px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 11px 18px;
-    width: 233px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 11px;
+    width: 240px;
+    height: 148px;
     margin: 26px;
+}
+
+.foto{
+    display: flex;
+    align-items: center;
 }
 
 .info_prod{
     display: grid;
     justify-items: center;
+    align-content: space-between;
 }
 
 .product h3{
