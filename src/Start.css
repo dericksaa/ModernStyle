@@ -1,0 +1,28 @@
+.inicio{
+    display: grid;
+    justify-items: center;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.inicio img{
+    height: 107px;
+}
+
+.inicio p{
+    width: 80%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: #4B1B1B;
+}
+
+.inicio button{
+    background-color: #C4CFFF;
+    border: none;
+    width: 83px;
+    height: 25px;
+    border-radius: 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}

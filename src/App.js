@@ -1,11 +1,11 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import MakeUpPage from './MakeUp';
+import MakeUpPage from './MakeUpPage';
 import Header from './Header'
 import Footer from './Footer';
 import SkinCare from './SkinCare';
-import Navigation from './Navigation';
-
-
+import Start from './Start';
+import CartShop from './CartShop';
+import Nav from './Nav';
 
 function App() {
   return (
@@ -13,11 +13,13 @@ function App() {
     <HashRouter>
       <Header/>
         <Routes>
-          <Route path='/' element={<MakeUpPage/>}/>
+          <Route path='/' element={<Start/>}/>
+          <Route path='/Shop' element={<CartShop/>}/>
+          <Route path='/MakeUp' element={<MakeUpPage/>}/>
           <Route path='/SkinCare' element={<SkinCare/>}/>
         </Routes>
       <Footer/>
-      <Navigation/>
+      <Nav/>
     </HashRouter>
     </>
   );
