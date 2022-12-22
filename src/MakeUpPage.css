@@ -15,16 +15,18 @@
   gap: 2rem;
 }
 
+.CF{
+  text-decoration: none;
+  color: black;
+}
+
 .category button{
   font-family: 'Oswald', sans-serif;
   font-size: 15px;
   border: none;
-  
-}
-
-#maquillaje{
   background-color: #C4CFFF;
-  width: 79px;
+  width: 100px;
   height: 24px;
   border-radius: 12px;
 }
+

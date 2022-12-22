@@ -1,13 +1,22 @@
 import './MakeUpPage.css';
 import Product from './Product';
+import { NavLink} from 'react-router-dom'
 import { ProductsMakeUp } from "./ProductsMakeUp.js";
 
 function MakeUpPage() {
   return (
     <div className="App">
       <div className='category'>
-        <button id='maquillaje'>Maquillaje</button>
-        <button>Cuidado Facial</button>
+
+        <button><NavLink
+          className='CF' to='/MakeUp'>
+          Maquillaje</NavLink>
+        </button>
+        
+        <button><NavLink className='CF' to='/SkinCare'>
+          Cuidado Facial</NavLink>
+        </button>
+        
       </div>
       {
         ProductsMakeUp.map(product=>(
@@ -19,3 +28,7 @@ function MakeUpPage() {
 }
 
 export default MakeUpPage;
+
+ // style={({isActive})=>({
+          //   backgroundColor: isActive? 'red':'blue'
+          // })}
