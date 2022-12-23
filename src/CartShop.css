@@ -1,10 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.shop{
+    display: grid;
+    justify-items: center;
+}
+
 .head{
     display: flex;
     justify-content: space-around;
 }
 
 .cartshop{
-    height: 200px;
+    height:170px;
+    max-width: 412px;
     width: 90%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -38,4 +50,36 @@ h3{
     border: none;
     border-radius: 3px;
     font-size: 20px;
+}
+
+.resume{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 148px;
+    width: 233px;
+    border: 2px black solid;
+    border-radius: 24px;
+    margin-bottom: 20px;
+}
+
+.resume button{
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    border: none;
+    background-color: #C4CFFF;
+    width: 154px;
+    height: 34px;
+    border-radius: 17px;
+}
+
+.lastbutton{
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    border: none;
+    background-color: #848FBC;
+    width: 154px;
+    height: 34px;
+    border-radius: 17px;
+    margin-bottom: 20px;
 }
