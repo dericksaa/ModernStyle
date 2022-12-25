@@ -20,7 +20,8 @@ function MakeUpPage() {
       </div>
       {
         ProductsMakeUp.map(product=>(
-          <Product key={product.id} product={product} />
+          <Product key={product.id} nombre1={product.nombre} 
+          precio={product.precio} foto={product.foto}/>
         ))
       }
     </div>

@@ -3,6 +3,7 @@ import Sombras from './images/sombras.png';
 import Brochas from './images/brochas.png';
 import paletTrendy from './images/PaletaTrendy.png';
 import sombras2 from './images/sombras2.png';
+// import { TYPES } from './Actions/shoppingActions';
 
 export const ProductsMakeUp = [
     {
@@ -37,3 +38,23 @@ export const ProductsMakeUp = [
     },
 ]
 
+export const cart=[]
+
+// export function shoppingReducer(state,action){
+//     switch (action.type) {
+//         case TYPES.ADD_TO_CART: {
+
+//         }
+//         case TYPES.REMOVE_ONE_FROM_CART:{
+
+//         }
+//         case TYPES.REMOVE_ALL_FROM_CART:{
+
+//         }
+//         case TYPES.CLEAR_CART:{
+
+//         }
+//         default:
+//             return state;
+//     }
+// }

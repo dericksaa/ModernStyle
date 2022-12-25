@@ -3,9 +3,8 @@ import './Product.css'
 
 
 
-const Product = ({product})=>{
+const Product = ({nombre1, precio, foto})=>{
 
-    const {nombre, precio, foto} = product
 
     const [cantidad, setCantidad]=useState(0)
 
@@ -18,17 +17,17 @@ const Product = ({product})=>{
     return(
         <div className="product">
             <div className='foto'>
-                <img src={foto} alt={nombre} />
+                <img src={foto} alt={nombre1} />
             </div>
             <div className='info_prod'>
-                <h3>{nombre}</h3>
+                <h3>{nombre1}</h3>
                 <h3>{`$ ${precio} cop`}</h3>
                 <div className='contador'>
                     <button onClick={sumador}>+</button>
                     <h3>{cantidad}</h3>
                     <button onClick={restart}>-</button>
                 </div>
-                <h3>Agregar</h3>
+                <button>Agregar</button>
             </div>
 
         </div>
