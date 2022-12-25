@@ -1,18 +1,23 @@
-import React from 'react'
-import {useState} from 'react'
-import Delete from './images/delete.png'
-import kabuki from './images/kabuki.png';
 import  './CartShop.css';
 import { NavLink } from 'react-router-dom';
 import { CartProduct } from './CartProduct';
+import Product from './Product';
+import { useReducer } from 'react';
+import { productStore, shopingReducer } from './productStore';
 
 
 const CartShop = () => {
 
-
+  const [state, dispatch] = useReducer( shopingReducer, productStore )
+  const {cart}=state
   return (
   <div className='shop'>
-    <CartProduct/>
+    {
+        cart.map(prodcar=>(
+        <CartProduct key={prodcar.id} nombre={prodcar.nombre} precio={prodcar.precio}
+        foto={prodcar.foto}/>
+      ))
+    }
     <div className='resume'>
       <h2>Resumen</h2>
       <h3>total:     45000cop</h3>
@@ -25,4 +30,4 @@ const CartShop = () => {
   )
 }
 
-export default CartShop
+export {CartShop}

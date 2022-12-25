@@ -1,9 +1,8 @@
 import React from 'react'
 import {useState} from 'react'
 import Delete from './images/delete.png'
-import kabuki from './images/kabuki.png';
 
-export const CartProduct = () => {
+export const CartProduct = ({nombre, precio, foto}) => {
 
   const [cantidad, setCantidad]=useState(1)
 
@@ -20,18 +19,18 @@ return (
 
   <div>
     <h3>Producto:</h3>
-    <img src={kabuki} alt="" />
+    <img src={foto} alt={nombre} />
   </div>
 
   <div>
-    <h3>Kit Kabuki</h3>
+    <h3>{nombre}</h3>
     <h3>Precio:</h3>
     <h3>Cantidad:</h3>
   </div>
 
   <div>
     <img src={Delete} alt="Icono de borrado" />
-    <h3>15000 cop</h3>
+    <h3>$ {precio} cop</h3>
     <div className='contador'>
       <button onClick={sumador}>+</button>
       <h3>{cantidad}</h3>

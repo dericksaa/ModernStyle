@@ -3,9 +3,13 @@ import './Product.css'
 
 
 
-const Product = ({nombre1, precio, foto})=>{
 
 
+
+
+const Product = ({nombre1, precio, foto, id})=>{
+
+    
     const [cantidad, setCantidad]=useState(0)
 
     const sumador =(e)=>{

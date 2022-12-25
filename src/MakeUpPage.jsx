@@ -1,9 +1,19 @@
 import './MakeUpPage.css';
 import Product from './Product';
 import { NavLink} from 'react-router-dom'
-import { ProductsMakeUp } from "./ProductsMakeUp.js";
+import { useReducer } from 'react';
+import { productStore, shopingReducer } from './productStore';
+
 
 function MakeUpPage() {
+
+  const [state, dispatch] = useReducer( shopingReducer, productStore )
+  const {ProductsMakeUp}=state
+
+  const addToCart =()=>{}
+  const delFromCart =()=>{}
+  const clearCart =()=>{}
+
   return (
     <div className="App">
       <div className='category'>
@@ -21,7 +31,7 @@ function MakeUpPage() {
       {
         ProductsMakeUp.map(product=>(
           <Product key={product.id} nombre1={product.nombre} 
-          precio={product.precio} foto={product.foto}/>
+          precio={product.precio} foto={product.foto} id={product.id}/>
         ))
       }
     </div>
@@ -29,7 +39,3 @@ function MakeUpPage() {
 }
 
 export default MakeUpPage;
-
- // style={({isActive})=>({
-          //   backgroundColor: isActive? 'red':'blue'
-          // })}
