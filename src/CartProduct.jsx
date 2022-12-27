@@ -10,6 +10,9 @@ export const CartProduct = ({data}) => {
   
   const {state,dispatch} = useContext(StateContext)
 
+  const deleteProduct=()=>{
+    dispatch({type:TYPES.REMOVE_ALL_FROM_CART, payload:id})
+  }
 
   const sumador =(e)=>{
     dispatch({type:TYPES.ADD_PRODUCT_QUANTITY, payload:id})
@@ -36,7 +39,7 @@ return (
   </div>
 
   <div>
-    <button>
+    <button onClick={deleteProduct}>
     <img src={Delete} alt="Icono de borrado" />
     </button>
     <h3>$ {precio} cop</h3>
