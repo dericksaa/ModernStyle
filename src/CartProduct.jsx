@@ -36,7 +36,9 @@ return (
   </div>
 
   <div>
+    <button>
     <img src={Delete} alt="Icono de borrado" />
+    </button>
     <h3>$ {precio} cop</h3>
     <div className='contador'>
       <button onClick={sumador}>+</button>

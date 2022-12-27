@@ -4,17 +4,24 @@ import { TYPES } from "../shoppingActions";
 export const stateReducer =(state, action)=> {
     switch (action.type) {
         case TYPES.ADD_TO_CART:{
-            return{
-                ...state,
-                cart:[
-                    ...state.cart,
-                    { 
-                        ...action.payload,
-                        qty:1,
-                    }
-                    
-                ]
+            let newProd = { 
+                ...action.payload,
             }
+
+            let itemInCart = state.cart.find(item=>item.id===newProd.id)
+            
+            return itemInCart?{
+                ...state,
+                cart:state.cart.map(item=>item.id===newProd.id?{...item,qty:item.qty+1}:item)
+            }:{
+                    ...state,
+                    cart:[
+                        ...state.cart,
+                        {...newProd,qty:1}
+                        
+                    ]
+                }
+            
             
         }
         case TYPES.ADD_PRODUCT_QUANTITY:{
