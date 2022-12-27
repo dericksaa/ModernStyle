@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import {useState} from 'react'
 import StateContext from './context/StateProvider'
 import Delete from './images/delete.png'
 import { TYPES } from './shoppingActions'
@@ -39,9 +38,7 @@ return (
   </div>
 
   <div>
-    <button onClick={deleteProduct}>
-    <img src={Delete} alt="Icono de borrado" />
-    </button>
+    <img className='butondelete' onClick={deleteProduct} src={Delete} alt="Icono de borrado"/>
     <h3>$ {precio} cop</h3>
     <div className='contador'>
       <button onClick={sumador}>+</button>

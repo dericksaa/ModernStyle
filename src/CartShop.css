@@ -35,11 +35,18 @@ h3{
     font-size: 15px;
 }
 
+.butondelete{
+    cursor: pointer;
+}
 
 .contador{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8px;
+}
+
+button{
+    cursor: pointer;
 }
 
 .contador button{
