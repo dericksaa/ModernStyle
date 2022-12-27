@@ -27,8 +27,7 @@ function SkinCare() {
       </div>
       {
         ProductsSkinCare.map(product=>(
-          <Product key={product.id} nombre1={product.nombre}
-          precio={product.precio} foto={product.foto} />
+          <Product key={product.id} data={product} addToCart={addToCart} />
         ))
       }
     </div>

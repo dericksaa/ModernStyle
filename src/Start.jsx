@@ -8,7 +8,7 @@ const Start = () => {
     <>
       <div className='inicio'>
         <img src={logo} alt="logo modern"/>
-        <p>​Al fundar Modern Style Makeup teníamos un sólo
+        <p> ​Al fundar Modern Style Makeup teníamos un sólo
           objetivo en mente: crear una tienda en línea que 
           ofreciera la más alta calidad, con las mejores 
           opciones para realizar tus compras y con alto nivel

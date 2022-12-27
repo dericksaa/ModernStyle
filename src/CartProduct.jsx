@@ -2,8 +2,10 @@ import React from 'react'
 import {useState} from 'react'
 import Delete from './images/delete.png'
 
-export const CartProduct = ({nombre, precio, foto}) => {
-
+export const CartProduct = ({data}) => {
+  
+  let {nombre, precio, foto, id}=data
+  
   const [cantidad, setCantidad]=useState(1)
 
   const sumador =(e)=>{

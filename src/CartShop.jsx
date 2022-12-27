@@ -1,22 +1,24 @@
 import  './CartShop.css';
 import { NavLink } from 'react-router-dom';
 import { CartProduct } from './CartProduct';
-import Product from './Product';
 import { useReducer } from 'react';
 import { productStore, shopingReducer } from './productStore';
+import { useAppContext } from './productStore';
 
 
 const CartShop = () => {
 
+
   const [state, dispatch] = useReducer( shopingReducer, productStore )
   const {cart}=state
+  console.log('state cartshop', state);
+
   return (
   <div className='shop'>
     {
-        cart.map(prodcar=>(
-        <CartProduct key={prodcar.id} nombre={prodcar.nombre} precio={prodcar.precio}
-        foto={prodcar.foto}/>
-      ))
+        cart.map((item, index)=>
+        <CartProduct key={item.id} data={item}/>
+      )
     }
     <div className='resume'>
       <h2>Resumen</h2>

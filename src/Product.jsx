@@ -7,8 +7,9 @@ import './Product.css'
 
 
 
-const Product = ({nombre1, precio, foto, id})=>{
+const Product = ({data, addToCart})=>{
 
+    let {nombre1, precio, foto, id}=data
     
     const [cantidad, setCantidad]=useState(0)
 
@@ -31,7 +32,7 @@ const Product = ({nombre1, precio, foto, id})=>{
                     <h3>{cantidad}</h3>
                     <button onClick={restart}>-</button>
                 </div>
-                <button>Agregar</button>
+                <button onClick={()=>addToCart(id)}>Agregar</button>
             </div>
 
         </div>

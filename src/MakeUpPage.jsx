@@ -3,14 +3,16 @@ import Product from './Product';
 import { NavLink} from 'react-router-dom'
 import { useReducer } from 'react';
 import { productStore, shopingReducer } from './productStore';
-
+import { TYPES } from './shoppingActions';
 
 function MakeUpPage() {
 
   const [state, dispatch] = useReducer( shopingReducer, productStore )
   const {ProductsMakeUp}=state
 
-  const addToCart =()=>{}
+  const addToCart =(id)=>{
+    dispatch({type:TYPES.ADD_TO_CART, payload:id})
+  }
   const delFromCart =()=>{}
   const clearCart =()=>{}
 
@@ -30,12 +32,13 @@ function MakeUpPage() {
       </div>
       {
         ProductsMakeUp.map(product=>(
-          <Product key={product.id} nombre1={product.nombre} 
-          precio={product.precio} foto={product.foto} id={product.id}/>
+          <Product key={product.id} data={product} addToCart={addToCart}/>
         ))
       }
     </div>
   );
 }
 
-export default MakeUpPage;
+
+
+export  {MakeUpPage}

@@ -1,4 +1,4 @@
-
+import { TYPES } from './shoppingActions';
 import kabuki from './images/kabuki.png';
 import Sombras from './images/sombras.png';
 import Brochas from './images/brochas.png';
@@ -9,7 +9,14 @@ import puntosnegros from './images/puntosnegros.png'
 import colageno from './images/colageno.png'
 import tonicorosas from './images/tonicorosas.png'
 import acne from './images/acne.png'
-import { TYPES } from './shoppingActions';
+import React, { useContext } from "react"
+import { useReducer } from 'react';
+
+
+
+
+
+
 
 
 export const productStore = {
@@ -29,14 +36,45 @@ export const productStore = {
     {id:5, nombre: 'Sticker acné', precio: 15000, foto:acne},
     ],
 
-    cart:[
-    ],
+    cart:[]
 }
+
+const AppContext = React.createContext()
+
+const useAppContext= ()=>{
+    return useContext(AppContext)
+}
+
+const AppProvider = ({children})=>{
+
+    const [state, dispatch] = useReducer( shopingReducer, productStore )
+
+    return(
+        <AppContext.Provider value={{cart: state.cart}}>
+            {children}
+        </AppContext.Provider>
+    )
+}
+
+export {
+    AppProvider,
+    useAppContext
+
+}
+
+
 
 export function shopingReducer(state, action){
     switch (action.type) {
         case TYPES.ADD_TO_CART:{
-            
+            let newItem = state.ProductsMakeUp.find(prod=> prod.id===action.payload);
+            console.log(newItem);
+            console.log('state',state)
+            return{
+                ...state,
+                cart:[...state.cart,newItem]
+            }
+            console.log(productStore.cart);
         }
         case TYPES.REMOVE_ONE_FROM_CART:{
 
@@ -51,4 +89,6 @@ export function shopingReducer(state, action){
     }
 
 }
+
+
 
