@@ -28,6 +28,14 @@ export const stateReducer =(state, action)=> {
             }
         }
         case TYPES.REMOVE_ONE_FROM_CART:{
+            const targetProductIdx = state.cart.findIndex(product=>product.id===action.payload)
+            const updatedProduct = {...state.cart[targetProductIdx],qty:state.cart[targetProductIdx].qty-1}
+            const updatedCart = [...state.cart]
+            updatedCart.splice(targetProductIdx,1,updatedProduct)
+            return{
+                ...state,
+                cart:updatedCart
+            }
 
         }
         case TYPES.REMOVE_ALL_FROM_CART:{

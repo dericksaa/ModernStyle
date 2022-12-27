@@ -15,7 +15,9 @@ export const CartProduct = ({data}) => {
     dispatch({type:TYPES.ADD_PRODUCT_QUANTITY, payload:id})
   }
   const restart =(e)=>{
-         
+    if (qty>0) {
+      dispatch({type:TYPES.REMOVE_ONE_FROM_CART, payload:id})
+    }
   }
 
 
