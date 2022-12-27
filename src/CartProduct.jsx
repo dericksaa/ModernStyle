@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {useState} from 'react'
+import StateContext from './context/StateProvider'
 import Delete from './images/delete.png'
+import { TYPES } from './shoppingActions'
 
 export const CartProduct = ({data}) => {
   
-  let {nombre, precio, foto, id}=data
+  let {nombre, precio, foto, id, qty}=data
   
-  const [cantidad, setCantidad]=useState(1)
+  const {state,dispatch} = useContext(StateContext)
+
 
   const sumador =(e)=>{
-    setCantidad(cantidad+1);
+    dispatch({type:TYPES.ADD_PRODUCT_QUANTITY, payload:id})
   }
   const restart =(e)=>{
-      (cantidad > 0) && setCantidad(cantidad-1);   
+         
   }
 
 
@@ -35,7 +38,7 @@ return (
     <h3>$ {precio} cop</h3>
     <div className='contador'>
       <button onClick={sumador}>+</button>
-      <h3>{cantidad}</h3>
+      <h3>{qty}</h3>
       <button onClick={restart}>-</button>
     </div>
   </div>

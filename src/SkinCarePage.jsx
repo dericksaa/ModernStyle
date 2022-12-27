@@ -1,17 +1,14 @@
 import './MakeUpPage.css';
 import Product from './Product';
 import { NavLink} from 'react-router-dom'
-import { useReducer } from 'react';
-import {productStore, shopingReducer } from './productStore';
+import { useContext } from 'react';
+import StateContext from './context/StateProvider';
 
 function SkinCare() {
 
-  const [state, dispatch] = useReducer( shopingReducer, productStore)
-  const {ProductsSkinCare}=state
 
-  const addToCart =()=>{}
-  const delFromCart =()=>{}
-  const clearCart =()=>{}
+  const {state} = useContext(StateContext)
+
 
   return (
     <div className="App">
@@ -26,8 +23,8 @@ function SkinCare() {
         </button>
       </div>
       {
-        ProductsSkinCare.map(product=>(
-          <Product key={product.id} data={product} addToCart={addToCart} />
+        state.ProductsSkinCare.map(product=>(
+          <Product key={product.id} data={product}/>
         ))
       }
     </div>

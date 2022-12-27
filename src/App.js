@@ -6,13 +6,13 @@ import SkinCare from './SkinCarePage';
 import Start from './Start';
 import {CartShop} from './CartShop';
 import Nav from './Nav';
-import { AppProvider } from './productStore';
+
 
 
 function App() {
   return (
     <>
-    <AppProvider>
+    
     <HashRouter>
       <Header/>
         <Routes>
@@ -24,7 +24,7 @@ function App() {
       <Footer/>
       <Nav/>
     </HashRouter>
-    </AppProvider>
+  
     </>
   );
 }

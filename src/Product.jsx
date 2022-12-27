@@ -1,5 +1,7 @@
-import {useState} from 'react'
+import {useContext, useState} from 'react'
+import StateContext from './context/StateProvider'
 import './Product.css'
+import { TYPES } from './shoppingActions'
 
 
 
@@ -7,7 +9,9 @@ import './Product.css'
 
 
 
-const Product = ({data, addToCart})=>{
+const Product = ({data})=>{
+
+    const {dispatch} = useContext(StateContext)
 
     let {nombre1, precio, foto, id}=data
     
@@ -19,6 +23,12 @@ const Product = ({data, addToCart})=>{
     const restart =(e)=>{
         (cantidad > 0) && setCantidad(cantidad-1);   
     }
+
+    const addToCart =(data)=>{
+        dispatch({type:TYPES.ADD_TO_CART, payload:data})
+    }
+    
+
     return(
         <div className="product">
             <div className='foto'>
@@ -32,7 +42,7 @@ const Product = ({data, addToCart})=>{
                     <h3>{cantidad}</h3>
                     <button onClick={restart}>-</button>
                 </div>
-                <button onClick={()=>addToCart(id)}>Agregar</button>
+                <button onClick={()=>addToCart(data)}>Agregar</button>
             </div>
 
         </div>

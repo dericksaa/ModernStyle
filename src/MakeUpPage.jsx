@@ -1,18 +1,14 @@
 import './MakeUpPage.css';
 import Product from './Product';
 import { NavLink} from 'react-router-dom'
-import { useReducer } from 'react';
-import { productStore, shopingReducer } from './productStore';
-import { TYPES } from './shoppingActions';
+import { useContext, useReducer } from 'react';
+import StateContext from './context/StateProvider';
 
 function MakeUpPage() {
 
-  const [state, dispatch] = useReducer( shopingReducer, productStore )
-  const {ProductsMakeUp}=state
+  const {state} = useContext(StateContext)
 
-  const addToCart =(id)=>{
-    dispatch({type:TYPES.ADD_TO_CART, payload:id})
-  }
+  
   const delFromCart =()=>{}
   const clearCart =()=>{}
 
@@ -31,8 +27,8 @@ function MakeUpPage() {
         
       </div>
       {
-        ProductsMakeUp.map(product=>(
-          <Product key={product.id} data={product} addToCart={addToCart}/>
+        state.ProductsMakeUp.map(product=>(
+          <Product key={product.id} data={product}/>
         ))
       }
     </div>
