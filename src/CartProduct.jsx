@@ -22,6 +22,11 @@ export const CartProduct = ({data}) => {
     }
   }
 
+  if (qty===0) {
+    dispatch({type:TYPES.REMOVE_ALL_FROM_CART, payload:id})
+  }
+
+
   const formatterPeso = new Intl.NumberFormat('es-CO', {
     style: 'currency',
     currency: 'COP',
