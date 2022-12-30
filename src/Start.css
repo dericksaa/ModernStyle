@@ -1,5 +1,6 @@
 .inicio{
     display: grid;
+    height: 100%;
     justify-items: center;
     gap: 3rem;
     padding-bottom: 3rem;
@@ -11,6 +12,7 @@
 
 .inicio p{
     width: 80%;
+    max-width: 700px;
     font-family: 'Quicksand', sans-serif;
     font-size: 12px;
     text-align: center;

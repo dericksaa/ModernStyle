@@ -43,9 +43,8 @@ const FormCompra = (e) => {
     const handleForm = (e)=>{
       e.preventDefault()
       const name = (state.cart.map((item)=>{
-       return  item.nombre +''+ item.qty
+        return  (item.nombre +'. cantidad: '+ item.qty)
       }))
-     
       let namewpp = values.nombre+' te damos la bienvenida a nuestra tienda'
       let ciudadEnvio = values.ciudad
       let directionwpp = 'La dirección de envio ingresada es: '+values.direccion

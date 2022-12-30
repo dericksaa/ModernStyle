@@ -24,6 +24,14 @@ const CartShop = () => {
     minimumFractionDigits: 0
   })
 
+  const emptyCart = ()=>{
+    if(getTotal()==0){
+      return '/Shop'
+    }else{
+      return ('/FormCompra')
+    }
+  }
+
   return (
   <div className='shop'>
     {
@@ -34,7 +42,7 @@ const CartShop = () => {
     <div className='resume'>
       <h2>Resumen</h2>
       <h3>{formatterPeso.format(getTotal())}</h3>
-      <NavLink to='/FormCompra'><button>Finalizar compra</button>
+      <NavLink to={emptyCart()}><button>Finalizar compra</button>
       </NavLink>
     </div>
     <NavLink to='/MakeUp'><button className='lastbutton'>Seguir comprando</button>

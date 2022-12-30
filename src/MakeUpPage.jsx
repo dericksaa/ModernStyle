@@ -8,9 +8,6 @@ function MakeUpPage() {
 
   const {state} = useContext(StateContext)
 
-  
-  const delFromCart =()=>{}
-  const clearCart =()=>{}
 
   return (
     <div className="App">

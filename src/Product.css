@@ -33,18 +33,13 @@
     font-size: 15px;
 }
 
-.contador{
-    display: flex;
-    gap: 10px;
-    
+.info_prod button{
+    border: 2px pink solid;
+    width: 60px;
+    padding: 3px;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    background-color: transparent;
+    font-weight: 700;
 }
 
-.contador button{
-    background-color: black;
-    color: white;
-    height: 24px;
-    width: 24px;
-    border: none;
-    border-radius: 3px;
-    font-size: 20px;
-}

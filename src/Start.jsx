@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink} from 'react-router-dom'
+import Footer from './Footer';
 import logo from './images/logo.png'
 import './Start.css';
 
