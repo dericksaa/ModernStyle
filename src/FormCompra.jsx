@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import StateContext from './context/StateProvider'
+import './formCompra.css'
 
 const FormCompra = (e) => {
 
@@ -31,14 +32,15 @@ const FormCompra = (e) => {
       })
       let namewpp = values.nombre
       let directionwpp = values.direccion
-      let url = 'https://api.whatsapp.com/send?phone=573153220760,&text=Hola: '+namewpp+'%0ADireccion: '+directionwpp+'%0AProductos :'+product_shop+''
+      let coment = values.comentarios
+      let url = 'https://api.whatsapp.com/send?phone=573153220760,&text=Hola: '+namewpp+'%0ADireccion: '+directionwpp+'%0AProductos :'+product_shop+'%0AComentarios :'+coment+''
       window.open(url)
     }
 
 
   return (
     <>
-    <form action="" onSubmit={handleForm}>
+    <form className='formulario' onSubmit={handleForm}>
       <input 
         type="text"
         name='nombre'
@@ -53,7 +55,7 @@ const FormCompra = (e) => {
         onChange={handleInput}
       />
 
-      <input 
+      <input className='comentarios'
         type="text"
         name='comentarios'
         placeholder='Comentarios o preguntas'

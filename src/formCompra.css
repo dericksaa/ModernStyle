@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.formulario{
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+
+
+.formulario input{
+    height: 2rem;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.formulario button{
+    border: none;
+    background-color: #C4CFFF;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario .comentarios{
+    height: 6rem;
+}
