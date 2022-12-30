@@ -18,6 +18,12 @@ const CartShop = () => {
     return result
   }
 
+  const formatterPeso = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0
+  })
+
   return (
   <div className='shop'>
     {
@@ -27,7 +33,7 @@ const CartShop = () => {
     }
     <div className='resume'>
       <h2>Resumen</h2>
-      <h3>$ {getTotal()} Cop</h3>
+      <h3>{formatterPeso.format(getTotal())}</h3>
       <NavLink to='/FormCompra'><button>Finalizar compra</button>
       </NavLink>
     </div>

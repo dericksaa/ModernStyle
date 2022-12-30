@@ -22,6 +22,11 @@ export const CartProduct = ({data}) => {
     }
   }
 
+  const formatterPeso = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0
+  })
 
 return (
   <div className='cartshop'>
@@ -39,7 +44,7 @@ return (
 
   <div>
     <img className='butondelete' onClick={deleteProduct} src={Delete} alt="Icono de borrado"/>
-    <h3>$ {precio} cop</h3>
+    <h3>{formatterPeso.format(precio)}</h3>
     <div className='contador'>
       <button onClick={sumador}>+</button>
       <h3>{qty}</h3>

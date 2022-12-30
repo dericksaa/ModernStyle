@@ -15,6 +15,11 @@ const Product = ({data})=>{
         dispatch({type:TYPES.ADD_TO_CART, payload:data})
     }
     
+    const formatterPeso = new Intl.NumberFormat('es-CO', {
+        style: 'currency',
+        currency: 'COP',
+        minimumFractionDigits: 0
+    })
 
     return(
         <div className="product">
@@ -23,7 +28,7 @@ const Product = ({data})=>{
             </div>
             <div className='info_prod'>
                 <h3>{nombre}</h3>
-                <h3>{`$ ${precio} cop`}</h3>
+                <h3>{formatterPeso.format (precio)}</h3>
                 
                 <button onClick={()=>addToCart(data)}>Agregar</button>
             </div>

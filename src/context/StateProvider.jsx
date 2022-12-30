@@ -18,18 +18,18 @@ const StateProvider = ({children})=>{
     const [state, dispatch]=useReducer(stateReducer, {
         ProductsMakeUp:[
         {id:1, nombre: 'kit kabuki', precio: 15000, foto:kabuki},
-        {id:2, nombre: 'Sombras', precio: 15000, foto:Sombras},
-        {id:3, nombre: 'Brochas', precio: 12000, foto:Brochas},
-        {id:4, nombre: 'Paleta Trendy', precio: 11000, foto:paletTrendy},
-        {id:5, nombre: 'Sombras', precio: 15000, foto:sombras2},
+        {id:2, nombre: 'Sombras Trendy retro', precio: 15000, foto:Sombras},
+        {id:3, nombre: 'Kit de Brochas', precio: 12000, foto:Brochas},
+        {id:4, nombre: 'Paleta Trendy Cupcake', precio: 11000, foto:paletTrendy},
+        {id:5, nombre: 'Sombras feria de las flores', precio: 30000, foto:sombras2},
         ],
     
         ProductsSkinCare:[
         {id:6, nombre: 'Mascarilla Trendy', precio: 18000, foto:MascarillaTrendy},
-        {id:7, nombre: 'Puntos Negros', precio: 2000, foto:puntosnegros},
-        {id:8, nombre: 'Colageno Labios', precio: 12000, foto:colageno},
-        {id:9, nombre: 'Tonico manzanilla y rosas', precio: 11000, foto:tonicorosas},
-        {id:10, nombre: 'Sticker acné', precio: 15000, foto:acne},
+        {id:7, nombre: 'Mascarilla Puntos Negros', precio: 2000, foto:puntosnegros},
+        {id:8, nombre: 'Colageno para labios', precio: 2000, foto:colageno},
+        {id:9, nombre: 'Tonico manzanilla y rosas', precio: 25000, foto:tonicorosas},
+        {id:10, nombre: 'Sticker para acné', precio: 20000, foto:acne},
         ],
     
         cart:[]
