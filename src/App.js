@@ -6,6 +6,7 @@ import SkinCare from './SkinCarePage';
 import Start from './Start';
 import {CartShop} from './CartShop';
 import Nav from './Nav';
+import FormCompra from './FormCompra';
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/Shop' element={<CartShop/>}/>
           <Route path='/MakeUp' element={<MakeUpPage/>}/>
           <Route path='/SkinCare' element={<SkinCare/>}/>
+          <Route path='/FormCompra' element={<FormCompra/>}/>
         </Routes>
       <Footer/>
       <Nav/>

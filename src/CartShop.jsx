@@ -27,8 +27,8 @@ const CartShop = () => {
     }
     <div className='resume'>
       <h2>Resumen</h2>
-      <h3>{getTotal()}</h3>
-      <NavLink to='/MakeUp'><button>Finalizar compra</button>
+      <h3>$ {getTotal()} Cop</h3>
+      <NavLink to='/FormCompra'><button>Finalizar compra</button>
       </NavLink>
     </div>
     <NavLink to='/MakeUp'><button className='lastbutton'>Seguir comprando</button>
