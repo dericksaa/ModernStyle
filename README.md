@@ -1,70 +1,46 @@
-<h1 align='center'>Make Up page</h1>
+## <h1 align='center'>Make Up page</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Inicio de la pagina](src/images/portada.PNG) 
 
-## Available Scripts
+## Descripción del proyecto 
 
-In the project directory, you can run:
+Consiste en el desarrollo de una app en línea que será una tienda virtual. La tienda desarrollada cuenta con dos categorías de productos, una de maquillaje y una de cuidado para la piel. las cuales se encuentran en la sección tienda de la app. La tienda cuenta con un carrito de compras el cual permite añadir los productos que deseas comprar, aumentarlos en cantidad y eliminarlos si ya no los deseas. al final de la página encuentras un formulario en el cual diligencias la información de envío de los productos. seguido de esto la información del carrito de compras se añade automáticamente a un mensaje de whatsapp que será enviado junto con la información de envío que diligencies en un formulario al que se te redirige luego de dar click en el botón de finalizar compra.  
 
-### `npm start`
+## Indice
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*[ Título e imagen de portada](#make-up-page)\
+*[Descripción del proyecto ](#descripción-del-proyecto)\
+*[ Estado del proyecto](#estado-del-proyecto)\
+*[ Tecnologías utilizadas](#tecnologías-utilizadas)\
+*[Acceso al proyecto](#acceso-al-proyecto)\
+*[Características y funcionalidades](#características-y-funcionalidades)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Estado del proyecto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+El proyecto se encuentra finalizado, al menos para cumplir las especificaciones del desarrollo del proyecto final de REACT. Con algunos detalles a perfeccionar. en un futuro sería interesante automatizar aún más el proceso de compra con una pasarela de pago PSE. 
 
-### `npm run build`
+## Tecnologías utilizadas 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Toda la aplicación es desarrollada en react, dando estilos a cada uno de los componentes con CSS. El despliegue se realiza en vercel 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Alt text](src/images/tecnologias.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Acceso al proyecto. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+El proyecto se encuentra desplegado en vercel. Puedes verlo dando click [aquí](https://modern-style.vercel.app/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Características y funcionalidades
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- `Agregar única vez al carrito` : Solo se puede agregar un sólo producto al carrito desde la tienda, la cantidad del mismo se podrá aumentar una vez se encuentre en el carrito de compras. Si el producto llega a cero en el carrito de compras este desaparecerá automáticamente del carrito.  
 
-## Learn More
+![Alt text](src/images/capturaDeProducto.PNG)
+- `Índice de productos agregados al carrito `: Una vez se agrega un producto al carrito aparecerá un índice en un círculo rojo en la parte superior izquierda del icono de compras. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `Envío del mensaje de pedido por whatsapp  `: Una vez que el cliente esté satisfecho con su pedido la app escribe automáticamente un mensaje con el pedido y la información de envío para ser redirigido a enviar en la cuenta de whatsapp de la tienda 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Alt text](src/images/wpp.PNG)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
