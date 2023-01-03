@@ -8,6 +8,8 @@ import {CartShop} from './CartShop';
 import Nav from './Nav';
 import FormCompra from './FormCompra';
 
+// Llamamos a todos los componentes que se renderizan en nuestra app 
+// y creamos las rutas entre ellos. 
 
 
 function App() {

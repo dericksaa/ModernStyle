@@ -3,7 +3,9 @@ import { NavLink} from 'react-router-dom'
 import Footer from './Footer';
 import logo from './images/logo.png'
 import './Start.css';
-
+// Simplemente contiene el logo, el párrafo de descripción 
+// y el botón de tienda que nos lleva a la sección makeUp, 
+// la categoría inicial de la tienda 
 const Start = () => {
   return (
     <>

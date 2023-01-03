@@ -1,5 +1,7 @@
-import Product from "../Product";
 import { TYPES } from "../shoppingActions";
+// En este archivo creamos nuestro reducer el cual recibe un 
+// estado y una acción, dentro del switch del reducer se encuentran
+//  las funciones a las cuales llamaremos con dispatch 
 
 export const stateReducer =(state, action)=> {
     switch (action.type) {

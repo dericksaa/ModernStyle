@@ -8,6 +8,8 @@ import StateContext from './context/StateProvider'
 const Navigation = () => {
 
   const {state} = useContext(StateContext)
+  // la variable numero se encarga de que el indicador de productos 
+  // en el carrito solo se muestre cuando sea diferente de cero 
 
   let numero = state.cart.length
   const display = ()=>{

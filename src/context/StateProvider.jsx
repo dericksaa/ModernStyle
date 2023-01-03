@@ -11,10 +11,13 @@ import colageno from '../images/colageno.png'
 import tonicorosas from '../images/tonicorosas.png'
 import acne from '../images/acne.png'
 
+// los principales hooks que a utilizar son useReducer y use Context primero creamos el contexto dentro del mismo archivo en el cual tenemos nuestro estado inicial y el cual maneja las funcionalidades a través de los dispatch que queremos tener en todos los componentes de la página donde les llamemos 
 
 const StateContext = createContext()
-
+// Ahora iniciamos el estado de useReducer. 
 const StateProvider = ({children})=>{
+    // llamamos al reducer que se encuentra en stateReducer y definimos el estado inicial
+    // el cual serán los arrays de los productos y el array inicial vacío de carrito de compras 
     const [state, dispatch]=useReducer(stateReducer, {
         ProductsMakeUp:[
         {id:1, nombre: 'kit kabuki', precio: 15000, foto:kabuki},
@@ -34,6 +37,8 @@ const StateProvider = ({children})=>{
     
         cart:[]
     })
+    // retornamos statecontex.provider con los valores del estado inicial y dispatch 
+    // para poder hacer actualizaciones de estado en los componentes que lo requieran. 
 
     return (
         <StateContext.Provider value={{state,dispatch}}> 

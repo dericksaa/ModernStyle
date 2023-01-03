@@ -3,6 +3,7 @@ import facebook from './images/facebook.png'
 import insta from './images/instagram.png'
 import tiktok from './images/tiktok.png'
 
+// tenemos las redes sociales y al hacer click o touch en el icono nos envía al link respectivo 
 
 
 const Footer =()=>{

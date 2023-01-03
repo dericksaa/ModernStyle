@@ -4,10 +4,12 @@ import Delete from './images/delete.png'
 import { TYPES } from './shoppingActions'
 
 export const CartProduct = ({data}) => {
-  
+  // desestructurados en data las propiedades del objeto y las hacemos iguales a data 
   let {nombre, precio, foto, id, qty}=data
-  
+  // llamamos al contexto que habíamos creado anteriormente 
   const {state,dispatch} = useContext(StateContext)
+  // creamos las funciones para incorporar en los botones 
+  // y llamamos con dispatch a los casos definidos en el reducer
 
   const deleteProduct=()=>{
     dispatch({type:TYPES.REMOVE_ALL_FROM_CART, payload:id})
@@ -32,6 +34,8 @@ export const CartProduct = ({data}) => {
     currency: 'COP',
     minimumFractionDigits: 0
   })
+
+  // renderizamos para cada uno de los productos la estructura y funcionalidad
 
 return (
   <div className='cartshop'>

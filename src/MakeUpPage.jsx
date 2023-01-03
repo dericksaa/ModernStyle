@@ -23,6 +23,9 @@ function MakeUpPage() {
         </button>
         
       </div>
+      {/* contiene una de las 2 secciones de la página, renderiza el 
+      componente producto para cada uno de los productos que se 
+      encuentran en el estado inicial dentro de esta categoría  */}
       {
         state.ProductsMakeUp.map(product=>(
           <Product key={product.id} data={product}/>

@@ -6,11 +6,13 @@ import { TYPES } from './shoppingActions'
 
 
 const Product = ({data})=>{
-
+    // desestructurar data en las propiedades de los objetos 
+    // que contienen la información de los productos 
     const {dispatch} = useContext(StateContext)
 
     let {nombre, precio, foto, id}=data
-    
+    // llamamos a la función que adiciona el artículo al carrito de compras, 
+    // dispatch llama al caso dentro de StateContex que queremos asociar a la función addToCart
     const addToCart =(data)=>{
         dispatch({type:TYPES.ADD_TO_CART, payload:data})
     }
