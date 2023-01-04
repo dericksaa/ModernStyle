@@ -3,7 +3,7 @@ import StateContext from './context/StateProvider'
 import './Product.css'
 import { TYPES } from './shoppingActions'
 
-
+// Este componente da estructura a cada uno de los productos que se encuentran en el estado inicial y que se muestran en las dos secciones de la tienda. 
 
 const Product = ({data})=>{
     // desestructurar data en las propiedades de los objetos 

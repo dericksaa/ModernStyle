@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import StateContext from './context/StateProvider'
 import Delete from './images/delete.png'
 import { TYPES } from './shoppingActions'
+// En este componente renderizamos todos los productos disponibles en el estado inicial. 
+// data hace referencia a las propiedades del objeto que guarda las información del producto 
 
 export const CartProduct = ({data}) => {
   // desestructurados en data las propiedades del objeto y las hacemos iguales a data 
@@ -23,12 +25,12 @@ export const CartProduct = ({data}) => {
       dispatch({type:TYPES.REMOVE_ONE_FROM_CART, payload:id})
     }
   }
-
+  // si la cantidad de algún producto se reduce a cero este despacha la misma función de eliminar el objeto de Cart 
   if (qty===0) {
     dispatch({type:TYPES.REMOVE_ALL_FROM_CART, payload:id})
   }
-
-
+  
+  // damos el formato de pesos colombianos a las cantidades numéricas del precio 
   const formatterPeso = new Intl.NumberFormat('es-CO', {
     style: 'currency',
     currency: 'COP',

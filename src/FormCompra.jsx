@@ -16,7 +16,8 @@ const FormCompra = (e) => {
     }
     return result
   }
-  // utilizamos usestate para cambiar el estado de los inputs, el estado inicial es un objeto con propiedades vacías, las cuales hacen referencia a los campos solicitados en los input 
+  // utilizamos usestate para cambiar el estado de los inputs, el estado inicial es un objeto 
+  // con propiedades vacías, las cuales hacen referencia a los campos solicitados en los input 
 
     const [values, setValues]  = useState({
       nombre:'',
@@ -25,7 +26,7 @@ const FormCompra = (e) => {
       comentarios:'',
     })
     
-    // asignamos los valores ingresados al estado inicial. 
+    // asignamos los valores ingresados al estado inicial. a las propiedades del objeto antes definido 
 
     const handleInput = (e)=>{
       const {name,value} = e.target;

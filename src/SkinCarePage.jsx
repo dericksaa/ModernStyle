@@ -3,7 +3,7 @@ import Product from './Product';
 import { NavLink} from 'react-router-dom'
 import { useContext } from 'react';
 import StateContext from './context/StateProvider';
-
+// Funciona de la misma manera que makeUpPage. solo que renderiza los elementos de skincare del estado inicial 
 function SkinCare() {
 
 
