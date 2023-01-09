@@ -1,4 +1,5 @@
 // import React from "react";
+import { NavLink } from 'react-router-dom'
 import './Header.css'
 import logo from './images/logo.png'
 
@@ -9,7 +10,7 @@ const Header = ()=>{
     return (
     
     <div className="Header">
-        <img src={logo} alt="logo modern"/>
+        <NavLink to='/'><img src={logo} alt="logo modern"/></NavLink>
         <h1>Modern Style</h1>
     </div>
         
