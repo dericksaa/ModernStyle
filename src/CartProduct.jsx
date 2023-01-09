@@ -11,7 +11,7 @@ export const CartProduct = ({data}) => {
   // llamamos al contexto que habíamos creado anteriormente 
   const {state,dispatch} = useContext(StateContext)
   // creamos las funciones para incorporar en los botones 
-  // y llamamos con dispatch a los casos definidos en el reducer
+  // y llamamos con dispatch a los casos definidos en el reducerr
 
   const deleteProduct=()=>{
     dispatch({type:TYPES.REMOVE_ALL_FROM_CART, payload:id})
