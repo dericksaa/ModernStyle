@@ -40,12 +40,16 @@ const CartShop = () => {
   // de cada unos de los productos en el carrito de compras y el resumen de la compra
 
   return (
-  <div className='shop'>
+  
+    <div className='shop'>
+    <div>
     {
         state.cart.map((item, index)=>
         <CartProduct key={item.id} data={item}/>
       )
     }
+    </div>
+    <div className='finalresumen'>
     <div className='resume'>
       <h2>Resumen</h2>
       <h3>{formatterPeso.format(getTotal())}</h3>
@@ -54,7 +58,9 @@ const CartShop = () => {
     </div>
     <NavLink to='/MakeUp'><button className='lastbutton'>Seguir comprando</button>
     </NavLink>
-  </div>
+    </div>
+    </div>
+ 
   )
 }
 
