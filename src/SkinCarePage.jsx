@@ -22,11 +22,13 @@ function SkinCare() {
           Cuidado Facial</NavLink>
         </button>
       </div>
+      <div className='cards'>
       {
         state.ProductsSkinCare.map(product=>(
           <Product key={product.id} data={product}/>
         ))
       }
+      </div>
     </div>
   );
 }

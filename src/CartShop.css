@@ -30,6 +30,12 @@
     justify-items: center;
 }
 
+.cartshop :first-child img{
+    height: 122px;
+    width: 98px;
+    object-fit: contain;
+}
+
 h3{
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;

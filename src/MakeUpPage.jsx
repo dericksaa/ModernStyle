@@ -26,11 +26,13 @@ function MakeUpPage() {
       {/* contiene una de las 2 secciones de la página, renderiza el 
       componente producto para cada uno de los productos que se 
       encuentran en el estado inicial dentro de esta categoría  */}
-      {
+      <div className='cards'>{
         state.ProductsMakeUp.map(product=>(
           <Product key={product.id} data={product}/>
         ))
       }
+      </div>
+      
     </div>
   );
 }
