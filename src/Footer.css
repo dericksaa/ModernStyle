@@ -15,12 +15,7 @@
     margin-bottom: 70px;
 }
 
-@media (min-width: 700px) {
-    .footer{
-        position: fixed;
-        bottom: 0;
-    }
-}
+
 
 .social{
     display: flex;
